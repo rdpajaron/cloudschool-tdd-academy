@@ -17,25 +17,24 @@ class PersonTest {
         // 3. Assert that the person is not null
         // 4. Assert that all fields match the expected values
         
-        // Your code here:
-        // Long id = 1L;
-        // String firstName = "John";
-        // String lastName = "Doe";
-        // String role = "Zookeeper";
-        // String email = "john.doe@zoo.com";
-        // LocalDate hireDate = LocalDate.of(2023, 1, 15);
-        // Double salary = 45000.0;
-        //
-        // Person person = new Person(id, firstName, lastName, role, email, hireDate, salary);
-        //
-        // assertNotNull(person);
-        // assertEquals(id, person.id());
-        // assertEquals(firstName, person.firstName());
-        // assertEquals(lastName, person.lastName());
-        // assertEquals(role, person.role());
-        // assertEquals(email, person.email());
-        // assertEquals(hireDate, person.hireDate());
-        // assertEquals(salary, person.salary());
+         Long id = 1L;
+         String firstName = "John";
+         String lastName = "Doe";
+         String role = "Zookeeper";
+         String email = "john.doe@zoo.com";
+         LocalDate hireDate = LocalDate.of(2023, 1, 15);
+         Double salary = 45000.0;
+
+         Person person = new Person(id, firstName, lastName, role, email, hireDate, salary);
+
+         assertNotNull(person);
+         assertEquals(id, person.id());
+         assertEquals(firstName, person.firstName());
+         assertEquals(lastName, person.lastName());
+         assertEquals(role, person.role());
+         assertEquals(email, person.email());
+         assertEquals(hireDate, person.hireDate());
+         assertEquals(salary, person.salary());
     }
 
     @Test
@@ -66,20 +65,19 @@ class PersonTest {
         // 2. Use assertThrows to test that creating a Person with null firstName throws IllegalArgumentException
         // 3. Verify the exception message is "Person first name cannot be null or empty"
         
-        // Your code here:
-        // Long id = 1L;
-        // String firstName = null;
-        // String lastName = "Doe";
-        // String role = "Zookeeper";
-        // String email = "john.doe@zoo.com";
-        // LocalDate hireDate = LocalDate.of(2023, 1, 15);
-        // Double salary = 45000.0;
-        //
-        // IllegalArgumentException exception = assertThrows(
-        //     IllegalArgumentException.class,
-        //     () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
-        // );
-        // assertEquals("Person first name cannot be null or empty", exception.getMessage());
+         Long id = 1L;
+         String firstName = null;
+         String lastName = "Doe";
+         String role = "Zookeeper";
+         String email = "john.doe@zoo.com";
+         LocalDate hireDate = LocalDate.of(2023, 1, 15);
+         Double salary = 45000.0;
+
+         IllegalArgumentException exception = assertThrows(
+             IllegalArgumentException.class,
+             () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
+         );
+         assertEquals("Person first name cannot be null or empty", exception.getMessage());
     }
 
     @Test
@@ -111,19 +109,19 @@ class PersonTest {
         // 3. Verify the exception message is "Person role cannot be null or empty"
         
         // Your code here:
-        // Long id = 1L;
-        // String firstName = "John";
-        // String lastName = "Doe";
-        // String role = null;
-        // String email = "john.doe@zoo.com";
-        // LocalDate hireDate = LocalDate.of(2023, 1, 15);
-        // Double salary = 45000.0;
-        //
-        // IllegalArgumentException exception = assertThrows(
-        //     IllegalArgumentException.class,
-        //     () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
-        // );
-        // assertEquals("Person role cannot be null or empty", exception.getMessage());
+         Long id = 1L;
+         String firstName = "John";
+         String lastName = "Doe";
+         String role = null;
+         String email = "john.doe@zoo.com";
+         LocalDate hireDate = LocalDate.of(2023, 1, 15);
+         Double salary = 45000.0;
+
+         IllegalArgumentException exception = assertThrows(
+             IllegalArgumentException.class,
+             () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
+         );
+         assertEquals("Person role cannot be null or empty", exception.getMessage());
     }
 
     @Test
@@ -175,18 +173,18 @@ class PersonTest {
         // 3. Verify the exception message is "Person salary must be positive"
         
         // Your code here:
-        // Long id = 1L;
-        // String firstName = "John";
-        // String lastName = "Doe";
-        // String role = "Zookeeper";
-        // String email = "john.doe@zoo.com";
-        // LocalDate hireDate = LocalDate.of(2023, 1, 15);
-        // Double salary = 0.0;
-        //
-        // IllegalArgumentException exception = assertThrows(
-        //     IllegalArgumentException.class,
-        //     () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
-        // );
-        // assertEquals("Person salary must be positive", exception.getMessage());
+         Long id = 1L;
+         String firstName = "John";
+         String lastName = "Doe";
+         String role = "Zookeeper";
+         String email = "john.doe@zoo.com";
+         LocalDate hireDate = LocalDate.of(2023, 1, 15);
+         Double salary = 0.0;
+
+         IllegalArgumentException exception = assertThrows(
+             IllegalArgumentException.class,
+             () -> new Person(id, firstName, lastName, role, email, hireDate, salary)
+         );
+         assertEquals("Person salary must be positive", exception.getMessage());
     }
 } 
